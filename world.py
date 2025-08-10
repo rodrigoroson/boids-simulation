@@ -14,8 +14,8 @@ class World:
 
     def populate(self, n_prey=60, n_pred=6):
         for _ in range(n_prey):
-            p = Prey(Vec2D(random.uniform(0, WIDTH),
-                           random.uniform(0, HEIGHT)))
+            p = Prey(Vec2D(random.uniform(0.1 * WIDTH, 0.9 * WIDTH),
+                           random.uniform(0.1 * HEIGHT, 0.9 * HEIGHT)))
             self.entities.append(p)
         for _ in range(n_pred):
             p = Predator(Vec2D(random.uniform(0, WIDTH),
